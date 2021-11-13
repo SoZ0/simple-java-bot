@@ -1,8 +1,5 @@
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,9 +7,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 
-import javax.net.ssl.HttpsURLConnection;
 
 public class Main {
 
@@ -24,7 +19,7 @@ public class Main {
 
     public static void checkSpells(URL url) throws IOException{
         System.out.println(url);
-        File file = new File("Test.txt");
+        File file = new File("spells.txt");
         file.createNewFile();
         FileWriter writer = new FileWriter(file);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
